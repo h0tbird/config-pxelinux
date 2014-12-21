@@ -1,4 +1,0 @@
-pxelinux
-========
-
-PXELinux configuration files
