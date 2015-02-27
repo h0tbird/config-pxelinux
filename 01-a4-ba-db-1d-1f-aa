@@ -1,0 +1,17 @@
+DEFAULT menu.c32
+PROMPT 0
+TIMEOUT 100
+ONTIMEOUT local
+
+MENU TITLE Main Menu
+
+LABEL local
+  MENU LABEL Boot local hard drive
+  LOCALBOOT 0
+
+LABEL install
+  MENU LABEL Unatended CentOS7 installation
+  KERNEL images/centos/7/x86_64/vmlinuz
+  IPAPPEND 2
+  APPEND initrd=images/centos/7/x86_64/initrd.img rd.driver.pre=loop inst.repo=http://repo01.demo.lan/centos/7/os/x86_64/ inst.ks=nfs:boot01.demo.lan:/kickstart/kvm-dell.ks inst.geoloc=0 inst.text
+
