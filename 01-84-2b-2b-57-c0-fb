@@ -1,3 +1,24 @@
+SERIAL 1 115200
+CONSOLE 1
+
+MENU COLOR screen 0;0
+MENU COLOR border 0;0
+MENU COLOR title 0;0
+MENU COLOR unsel 0;0
+MENU COLOR hotkey 0;0
+MENU COLOR sel 7;37;40
+MENU COLOR disabled 0;0
+MENU COLOR scrollbar 0;0
+MENU COLOR tabmsg 0;0
+MENU COLOR cmdmark 0;0
+MENU COLOR cmdline 0;0
+MENU COLOR pwdborder 0;0
+MENU COLOR pwdheader 0;0
+MENU COLOR pwdentry 0;0
+MENU COLOR timeout_msg 0;0
+MENU COLOR timeout 0;0
+MENU COLOR help 0;0
+
 DEFAULT menu.c32
 PROMPT 0
 TIMEOUT 100
@@ -13,5 +34,5 @@ LABEL install
   MENU LABEL Unatended CentOS7 installation
   KERNEL images/centos/7/x86_64/vmlinuz
   IPAPPEND 2
-  APPEND initrd=images/centos/7/x86_64/initrd.img rd.driver.pre=loop inst.repo=http://data01.demo.lan/centos/7/os/x86_64/ inst.ks=http://data01.demo.lan/kickstarts/kvm-dell.ks inst.geoloc=0 inst.text
+  APPEND initrd=images/centos/7/x86_64/initrd.img console=tty0 console=ttyS1,115200n8 rd.driver.pre=loop inst.repo=http://data01.demo.lan/centos/7/os/x86_64/ inst.ks=http://data01.demo.lan/kickstarts/kvm-dell.ks inst.geoloc=0 inst.text
 
