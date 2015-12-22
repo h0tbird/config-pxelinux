@@ -34,5 +34,5 @@ LABEL install
   MENU LABEL Unatended CentOS 7 installation
   KERNEL images/centos/7/x86_64/vmlinuz
   IPAPPEND 2
-  APPEND initrd=images/centos/7/x86_64/initrd.img nomodeset console=tty0 console=ttyS1,115200n8 vlan=em1.101:em1 rd.driver.pre=loop inst.repo=http://data01/centos/7/os/x86_64/ inst.ks=http://data01/kickstart/kvm-dell-101.ks inst.geoloc=0 inst.text
+  APPEND initrd=images/centos/7/x86_64/initrd.img nomodeset console=tty0 console=ttyS1,115200n8 vlan=em1.101:em1 rd.driver.pre=loop inst.repo=http://data01/centos/7/os/x86_64/ inst.ks=http://data01/kickstart/kvm-dell-101.ks inst.geoloc=0 inst.text nousb
 
